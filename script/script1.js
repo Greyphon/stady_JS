@@ -9,13 +9,13 @@
 //console.log(Boolean(5));
 //console.log(!!"js");
 
-//console.log(String([1,2,3]));
+//console.log(String([1,2,3])); //переобразование с утроску
 //console.log(typeof (10+""));
 //console.log(typeof (a.toString()));
 
-//console.log(typeof Number("33"));
+//console.log(typeof Number("33"));//переобразование в число
 //console.log(typeof + "10");
-//let n = 10;
+//let n = '10';
 //n *= 1;
 //console.log(typeof n);
 
@@ -78,12 +78,12 @@ console.log(typeof deposit);
 console.log(typeof income);
 
 let expenses = getExpeses();
-let expenses1 = getExpeses();
 let what = prompt("Во сколько это обойдется?");
+let expenses1 = getExpeses();
 let what1 = prompt("Во сколько это обойдется?");
 
 let budgetMonth = money - what - what1;
-console.log('budgetMonth', budgetMonth);
+console.log('Доход за месяц:', budgetMonth);
 
 function getExpeses(text) {
     if (text != null) {
@@ -93,16 +93,15 @@ function getExpeses(text) {
     return prompt("Какие обязательные ежемесячные расходы у вас есть?");
 }
 
-let monthCountToGoal = Math.ceil(mission / budgetMonth); 
+let monthCountToGoal = Math.ceil(mission / budgetMonth); //округляем в большую сторону
 console.log('monthCountToGoal', monthCountToGoal);
 
 let budgetDay = budgetMonth / 30;
-let monthCountToGoal1 = Math.floor(mission / budgetMonth);
+let monthCountToGoal1 = Math.floor(mission / budgetMonth); //округляем в меньшую сторону
 console.log('monthCountToGoal1', monthCountToGoal1);
 
 if (budgetDay >= 800) {
-    console.log("Высокий уровень дохода");
-        
+    console.log("Высокий уровень дохода");  
 } else if (budgetDay >= 300){
     console.log("Средний уровень дохода");
 } else if (budgetDay > 0){
@@ -110,4 +109,8 @@ if (budgetDay >= 800) {
 } else if (budgetDay <= 0){
     console.log("Что то пошло не так");
 }
+
+
+
+
 
